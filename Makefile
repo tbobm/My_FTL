@@ -2,8 +2,10 @@ CFLAGS = -W -Wall -Werror -pedantic
 CC = gcc
 RM = rm -f
 NAME = ftl
-SRC	= main.c \
-	  air_shed.c
+SRC	= src/main.c \
+	  src/my_string.c \
+	  src/readline.c \
+	  src/air_shed.c 
 
 OBJ = $(SRC:.c=.o)
 
