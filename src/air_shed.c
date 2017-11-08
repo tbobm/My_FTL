@@ -16,7 +16,7 @@ t_ship  *create_ship() {
     my_ship = malloc(sizeof(t_ship));
     if (my_ship == NULL) {
         my_putstr(TXT_ERR_SHIP);
-        return KO;
+        return (KO);
     }
     my_ship->hull = BASE_HULL;
     my_ship->weapon = NULL;
