@@ -24,5 +24,6 @@ struct          s_ship {
 
 /* Prototypes */
 t_ship  *create_ship();
+int    add_weapon_to_ship(t_ship*);
 
 #endif /* __FTL_H__ */

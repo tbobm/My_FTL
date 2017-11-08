@@ -38,10 +38,13 @@ t_ship  *create_ship() {
 int     add_weapon_to_ship(t_ship *ship) {
     ship->weapon = malloc(sizeof(t_weapon));
 
+    my_putstr(TXT_WEAP_BEGIN);
     if (ship->weapon == NULL) {
+        my_putstr(TXT_WEAP_ERR);
         return (0);
     }
 
+    my_putstr(TXT_WEAP_OK);
     ship->weapon->damage = BASE_DMG;
     return (1);
 }
