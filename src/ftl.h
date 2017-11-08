@@ -60,10 +60,12 @@ t_ship  *create_ship();
 int     add_weapon_to_ship(t_ship*);
 int     add_ftl_drive_to_ship(t_ship*);
 int     add_navigation_tools_to_ship(t_ship*);
+int     add_container_to_ship(t_ship*);
 
 void    free_ship(t_ship*);
 void    free_weapon(t_weapon*);
 void    free_ftl_drive(t_ftl_drive*);
 void    free_nav_tools(t_navigation_tools*);
+void    free_container(t_container*);
 
 #endif /* __FTL_H__ */

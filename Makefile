@@ -6,6 +6,7 @@ SRC	= src/main.c \
 	  src/my_string.c \
 	  src/readline.c \
 	  src/air_shed.c \
+	  src/container.c \
 	  src/utils.c
 
 OBJ = $(SRC:.c=.o)

@@ -26,6 +26,12 @@ avec succes!\n"
 #define TXT_NAV_ERR "votre vaisseau a explose lorsque vous avez \
 pose les outils de navigations\n"
 
+/* Containers */
+#define TXT_CON_BEGIN "ajout du container en cours...\n"
+#define TXT_CON_OK "le container a ete ajoute avec succes!\n"
+#define TXT_CON_ERR "votre vaisseau a explose lorsque vous avez \
+pose le container\n"
+
 /* System states */
 #define TXT_SYS_ON "online"
 
