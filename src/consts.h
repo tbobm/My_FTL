@@ -7,5 +7,7 @@
 #define BASE_HULL 50
 #define BASE_DMG 10
 #define BASE_ENG 10
+#define BASE_EVA 25
+#define BASE_SEC 0
 
 #endif /* __CONSTS_H__ */
