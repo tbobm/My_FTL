@@ -7,6 +7,7 @@ int main(void) {
 
     ship = create_ship();
     add_weapon_to_ship(ship);
-    free(ship);
+    add_ftl_drive_to_ship(ship);
+    free_ship(ship);
     return (0);
 }

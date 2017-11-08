@@ -6,4 +6,6 @@
 
 #define BASE_HULL 50
 #define BASE_DMG 10
+#define BASE_ENG 10
+
 #endif /* __CONSTS_H__ */

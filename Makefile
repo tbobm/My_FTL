@@ -5,7 +5,8 @@ NAME = ftl
 SRC	= src/main.c \
 	  src/my_string.c \
 	  src/readline.c \
-	  src/air_shed.c 
+	  src/air_shed.c \
+	  src/utils.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -22,4 +23,4 @@ fclean: clean
 
 re: fclean $(NAME)
 
-.PHONY: clean fclean
+.PHONY: clean fclean all re

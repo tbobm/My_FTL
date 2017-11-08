@@ -13,4 +13,13 @@
 #define TXT_WEAP_ERR "votre vaisseau a explose quand vous avez\
     tente d'ajouter les armes\n"
 
+/* Ftl drive */
+#define TXT_FTL_BEGIN "ajout du reacteur en cours...\n"
+#define TXT_FTL_OK "le reacteur a ete ajoute avec succes!\n"
+#define TXT_FTL_ERR "votre vaisseau a explose lorsque vous avez \
+    pose le reacteur\n"
+
+/* System states */
+#define TXT_SYS_ON "online"
+
 #endif /* __TEXTS_H__ */
