@@ -6,6 +6,7 @@
 void    free_ship(t_ship *ship) {
     free_weapon(ship->weapon);
     free_ftl_drive(ship->ftl_drive);
+    free_nav_tools(ship->nav_tools);
     free(ship);
 }
 
@@ -23,4 +24,12 @@ void    free_weapon(t_weapon *weapon) {
 void    free_ftl_drive(t_ftl_drive *ftl_drive) {
     free(ftl_drive->system_state);
     free(ftl_drive);
+}
+
+/*
+ * Frees navigation tools
+ */
+void    free_nav_tools(t_navigation_tools *nav_tools) {
+    free(nav_tools->system_state);
+    free(nav_tools);
 }

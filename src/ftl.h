@@ -7,10 +7,15 @@
 #include "texts.h"
 
 /* Declaration of the used structures */
+/* Ship-related structs */
 typedef struct s_ship t_ship;
 typedef struct s_weapon t_weapon;
 typedef struct s_ftl_drive t_ftl_drive;
 typedef struct s_navigation_tools t_navigation_tools;
+
+/* Loot structs */
+typedef struct s_freight t_freight;
+typedef struct s_container t_container;
 
 
 /* Definition of the different structures */
@@ -30,11 +35,24 @@ struct          s_ftl_drive {
     char        *system_state;
 };
 
+struct          s_freight {
+    char        *item;
+    t_freight   *next;
+    t_freight   *prev;
+};
+
+struct          s_container {
+    t_freight   *first;
+    t_freight   *last;
+    int         nb_elem;
+};
+
 struct                  s_ship {
     int                 hull;
     t_weapon            *weapon;
     t_ftl_drive         *ftl_drive;
     t_navigation_tools  *nav_tools;
+    t_container         *container;
 };
 
 /* Prototypes */
@@ -46,5 +64,6 @@ int     add_navigation_tools_to_ship(t_ship*);
 void    free_ship(t_ship*);
 void    free_weapon(t_weapon*);
 void    free_ftl_drive(t_ftl_drive*);
+void    free_nav_tools(t_navigation_tools*);
 
 #endif /* __FTL_H__ */
