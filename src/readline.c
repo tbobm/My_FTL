@@ -7,7 +7,7 @@
 #include	<stdlib.h>
 #include	<unistd.h>
 
-char		*readline(void)
+char		*my_readline(void)
 {
   ssize_t	ret;
   char		*buff;

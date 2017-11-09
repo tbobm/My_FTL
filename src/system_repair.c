@@ -58,7 +58,7 @@ void    system_repair(t_ship *ship) {
     int     command_found;
 
     my_putstr(PROMPT);
-    input = readline();
+    input = my_readline();
     idx = 0;
     command_found = 0;
     while (g_repair_commands[idx].command_name != NULL) {

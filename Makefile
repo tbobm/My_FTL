@@ -10,8 +10,7 @@ SRC	= src/main.c \
 	  src/utils.c \
 	  src/bonus_commands.c \
 	  src/system_control.c \
-	  src/system_repair.c \
-	  src/readline.c
+	  src/system_repair.c
 
 OBJ = $(SRC:.c=.o)
 
