@@ -47,4 +47,18 @@ pose le container\n"
 #define CHK_WEAP_OK "systeme d'armement OK!\n"
 #define CHK_WEAP_HS "systeme d'armement hors service!\n"
 
+/* System repairs */
+
+#define REP_FTL_BEG "reparation du reacteur en cours...\n"
+#define REP_FTL_OK "reparation termine! systeme reacteur OK!\n"
+#define REP_FTL_ERR "les reparations du reacteur ont echoue\n" 
+
+#define REP_NAV_BEG "reparation du systeme de navigation en cours...\n"
+#define REP_NAV_OK "reparation termine! systeme de navigation OK!\n"
+#define REP_NAV_ERR "les reparations des outils de navigations ont echoue\n"
+
+#define REP_WEAP_BEG "reparation du systeme d'armement en cours...\n"
+#define REP_WEAP_OK "reparation termine! systeme d'armement OK!\n"
+#define REP_WEAP_ERR "les reparations du systeme d'armement ont echoue\n"
+
 #endif /* __TEXTS_H__ */

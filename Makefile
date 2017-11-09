@@ -1,5 +1,5 @@
-CFLAGS = -W -Wall -Werror -pedantic
 CC = gcc
+CFLAGS = -W -Wall -Werror -pedantic
 RM = rm -f
 NAME = ftl
 SRC	= src/main.c \
@@ -9,7 +9,8 @@ SRC	= src/main.c \
 	  src/container.c \
 	  src/utils.c \
 	  src/bonus_commands.c \
-	  src/system_control.c
+	  src/system_control.c \
+	  src/system_repair.c
 
 OBJ = $(SRC:.c=.o)
 
