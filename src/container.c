@@ -47,3 +47,23 @@ void    add_freight_to_container(t_ship *ship, t_freight *freight) {
     ship->container->last = freight;
     ship->container->nb_elem += 1;
 }
+
+/*
+ * Remove a container from the linked list
+ *
+ * Frees the freight, and syncs the linked list
+ */
+void    del_freight_from_container(t_ship *ship, t_freight *freight) {
+    if (freight->prev != NULL) {
+        freight->prev->next = freight->next;
+    } else {
+        ship->container->first = freight->next;
+    }
+
+    if (freight->next != NULL) {
+        freight->next->prev = freight->prev;
+    } else {
+        ship->container->last = freight->prev;
+    }
+    free_freight(freight);
+}

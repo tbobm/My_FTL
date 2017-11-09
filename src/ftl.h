@@ -67,5 +67,6 @@ void    free_weapon(t_weapon*);
 void    free_ftl_drive(t_ftl_drive*);
 void    free_nav_tools(t_navigation_tools*);
 void    free_container(t_container*);
+void    free_freight(t_freight*);
 
 #endif /* __FTL_H__ */

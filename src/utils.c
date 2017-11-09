@@ -41,3 +41,11 @@ void    free_nav_tools(t_navigation_tools *nav_tools) {
 void    free_container(t_container *container) {
     free(container);
 }
+
+/*
+ * Frees freight
+ */
+void    free_freight(t_freight *freight) {
+    free(freight->item);
+    free(freight);
+}
