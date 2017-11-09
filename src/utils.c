@@ -39,6 +39,15 @@ void    free_nav_tools(t_navigation_tools *nav_tools) {
  * Frees containers
  */
 void    free_container(t_container *container) {
+    t_freight   *freight;
+
+    if (container->first != NULL) {
+        freight = container->first;
+        while (freight != NULL) {
+            freight = freight->next;
+            free_freight(freight->prev);
+        }
+    }
     free(container);
 }
 

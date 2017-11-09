@@ -35,4 +35,16 @@ pose le container\n"
 /* System states */
 #define TXT_SYS_ON "online"
 
+#define CHK_FTL_BEG "verification du reacteur en cours...\n"
+#define CHK_FTL_OK "reacteur OK!\n"
+#define CHK_FTL_HS "reacteur hors service!\n"
+
+#define CHK_NAV_BEG "verification du systeme de navigation en cours...\n"
+#define CHK_NAV_OK "systeme de navigation OK!\n"
+#define CHK_NAV_HS "systeme de navigation hors service!\n"
+
+#define CHK_WEAP_BEG "verification du systeme d'armement en cours...\n"
+#define CHK_WEAP_OK "systeme d'armement OK!\n"
+#define CHK_WEAP_HS "systeme d'armement hors service!\n"
+
 #endif /* __TEXTS_H__ */

@@ -10,4 +10,8 @@
 #define BASE_EVA 25
 #define BASE_SEC 0
 
+#define BONUS_DMG 5
+#define BONUS_EVA 3
+#define BONUS_ENG 1
+
 #endif /* __CONSTS_H__ */

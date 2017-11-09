@@ -13,6 +13,14 @@
  *  KO: 0
  *  OK: 1
  */
+
+static const t_bonus g_func_ptr[] = {
+    {"attackbonus", fun_attackbonus},
+    {"evadebonus", fun_evadebonus},
+    {"energy", fun_energy},
+    {NULL, NULL}
+};
+
 int add_container_to_ship(t_ship *ship) {
     t_container *container;
 
@@ -65,5 +73,32 @@ void    del_freight_from_container(t_ship *ship, t_freight *freight) {
     } else {
         ship->container->last = freight->prev;
     }
+    ship->container->nb_elem -= 1;
     free_freight(freight);
+}
+
+/*
+ * Allows item manipulation
+ */
+void    get_bonus(t_ship *ship) {
+    t_freight   *tmp;
+    int         idx;
+
+    if (ship->container->first == NULL) {
+        return;
+    }
+    idx = 0;
+    tmp = ship->container->first;
+    while (tmp != NULL) {
+        while (g_func_ptr[idx].command != NULL) {
+            if (my_strcmp(g_func_ptr[idx].name, tmp->item) == 0) {
+                g_func_ptr[idx].command(ship);
+            }
+            idx++;
+        }
+        //printf("")
+        idx = 0;
+        // Magic array ptr
+        tmp = tmp->next;
+    }
 }
