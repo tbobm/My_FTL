@@ -18,6 +18,9 @@ typedef struct s_freight t_freight;
 typedef struct s_container t_container;
 typedef struct s_bonus t_bonus;
 
+/* Repair commands */
+typedef struct s_repair_command t_repair_command;
+
 
 /* Definition of the different structures */
 struct      s_navigation_tools {
@@ -56,9 +59,14 @@ struct                  s_ship {
     t_container         *container;
 };
 
-struct  s_bonus {
+struct      s_bonus {
     char    *name;
-    void    (*command)(t_ship *);
+    void    (*command)(t_ship*);
+};
+
+struct      s_repair_command {
+    char    *command_name;
+    void    (*command)(t_ship*);
 };
 
 /* Prototypes */
@@ -86,5 +94,9 @@ void    system_control(t_ship*);
 void    ftl_drive_check(t_ship*);
 void    navigation_tools_system_check(t_ship*);
 void    weapon_system_check(t_ship*);
+
+void    ftl_drive_system_repair(t_ship*);
+void    weapon_system_repair(t_ship*);
+void    navigation_tools_system_repair(t_ship*);
 
 #endif /* __FTL_H__ */
