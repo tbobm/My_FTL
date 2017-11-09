@@ -51,3 +51,26 @@ void    weapon_system_repair(t_ship *ship) {
     ship->ftl_drive->system_state = str;
     my_putstr(REP_WEAP_OK);
 }
+
+void    system_repair(t_ship *ship) {
+    char    *input;
+    int     idx;
+    int     command_found;
+
+    my_putstr(PROMPT);
+    input = readline();
+    idx = 0;
+    command_found = 0;
+    while (g_repair_commands[idx].command_name != NULL) {
+        if (my_strcmp(g_repair_commands[idx].command_name, input) == 0) {
+            g_repair_commands[idx].command(ship);
+            command_found = OK;
+        }
+        idx++;
+    }
+    if (command_found == OK) {
+        my_putstr(COMMAND_FOUND);
+    } else {
+        my_putstr(COMMAND_NOT_FOUND);
+    }
+}

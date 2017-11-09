@@ -96,9 +96,7 @@ void    get_bonus(t_ship *ship) {
             }
             idx++;
         }
-        //printf("")
         idx = 0;
-        // Magic array ptr
         tmp = tmp->next;
     }
 }

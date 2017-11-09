@@ -1,6 +1,9 @@
 #ifndef __TEXTS_H__
 #define __TEXTS_H__
 
+/* Prompt */
+#define PROMPT "repair_system ~~> "
+
 /* Ships */
 #define TXT_SHIP_OK "amelioration du vaisseau termine!\n"
 #define TXT_SHIP_BEGIN "construction du vaisseau en cours...\n"
@@ -48,7 +51,6 @@ pose le container\n"
 #define CHK_WEAP_HS "systeme d'armement hors service!\n"
 
 /* System repairs */
-
 #define REP_FTL_BEG "reparation du reacteur en cours...\n"
 #define REP_FTL_OK "reparation termine! systeme reacteur OK!\n"
 #define REP_FTL_ERR "les reparations du reacteur ont echoue\n" 
@@ -60,5 +62,9 @@ pose le container\n"
 #define REP_WEAP_BEG "reparation du systeme d'armement en cours...\n"
 #define REP_WEAP_OK "reparation termine! systeme d'armement OK!\n"
 #define REP_WEAP_ERR "les reparations du systeme d'armement ont echoue\n"
+
+/* Commands */
+#define COMMAND_FOUND "[SYSTEM FAILURE] : le lecteur de commande est bloque\n"
+#define COMMAND_NOT_FOUND "[SYSTEM FAILURE] : commande inconnue\n"
 
 #endif /* __TEXTS_H__ */
