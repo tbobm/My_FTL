@@ -1,5 +1,12 @@
 #include "ftl.h"
 
+static const t_repair_command g_repair_commands[] = {
+    {"ftl_drive", ftl_drive_system_repair},
+    {"nav_tools", navigation_tools_system_repair},
+    {"weapon", weapon_system_repair},
+    {NULL, NULL}
+};
+
 void    ftl_drive_system_repair(t_ship *ship) {
     char    *str;
 
