@@ -4,16 +4,17 @@ int     is_alive(t_game *game) {
     return (game->ship->hull > 0);
 }
 
-int     has_energy(t_game *game) {
+int     has_energy(t_game *game) { /* TODO: Check freights */
     return (game->ship->ftl_drive->energy > 0);
 }
 
-int     is_at_last_sector(t_game *game) {
-    return (game->sector->lvl == 0);
-}
-
 int     has_won(t_game *game) {
-    return (game->sector->lvl == LAST_SECTOR);
+    if (game->ship->nav_tools->sector == LAST_SECTOR) {
+        my_putstr(WIN_TXT);
+        display_stats(game->ship);
+        return (OK);
+    }
+    return (KO);
 }
 
 /*
@@ -29,14 +30,8 @@ int     can_continue(t_game *game) {
         return (KO);
     }
 
-    if ((has_energy(game) == KO) && !(is_at_last_sector(game) == KO)) { 
+    if ((has_energy(game) == KO) && !(has_won(game) == KO)) { 
         return (KO);
     }
-
-    if (has_won(game) == OK) {
-        my_putstr(WIN_TXT);
-        display_stats(game->ship);
-        return (KO);
-    }
-    return (OK);
+    return (has_won(game));
 }

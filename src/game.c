@@ -3,7 +3,7 @@
 /*
 static const t_input_commands g_input_commands[] = {
     {"attack", attack},
-    {"detect", scan},
+    {"detect", detect},
     {"jump", jump},
     {"getbonus", bonus},
     {"repair_system", repair},

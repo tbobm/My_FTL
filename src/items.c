@@ -24,4 +24,5 @@ void    create_freight(t_game *game) {
     } else {
         freight->item = my_strdup("scrap");
     }
+    add_freight_to_container(game->ship, freight);
 }

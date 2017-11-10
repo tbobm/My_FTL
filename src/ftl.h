@@ -34,6 +34,7 @@ struct          s_navigation_tools {
     char        *system_state;
     int         sector;
     int         evade;
+    int         has_scanned;
 };
 
 struct          s_weapon {
@@ -140,7 +141,7 @@ void    display_evade(t_ship*);
 void    display_damage(t_ship*);
 void    display_stats(t_ship*);
 
-int     scan(t_game*);
+int     detect(t_game*);
 int     attack(t_game*);
 int     bonus(t_game*);
 int     jump(t_game*);
@@ -151,7 +152,6 @@ int     game_exit(t_game*);
 
 int     is_alive(t_game*);
 int     has_energy(t_game*);
-int     is_at_last_sector(t_game*);
 int     has_won(t_game*);
 int     can_continue(t_game*);
 
@@ -159,9 +159,13 @@ void    player_attack(t_game*);
 int     enemy_is_alive(t_game*);
 void    enemy_attack(t_game*);
 
+void    create_freight(t_game*);
+void    create_sector(t_game*);
+
 /* Stats */
 int     generate_nbr(int, int);
 int     get_percent(int);
+float   my_pow(float, float);
 
 
 #endif /* __FTL_H__ */

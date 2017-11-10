@@ -3,19 +3,24 @@ CFLAGS 	= 	-W -Wall -Werror -pedantic
 RM 		= 	rm -f
 NAME 	=	my_ftl
 SRC		= 	src/main.c \
-	  		src/my_string.c \
-	  		src/readline.c \
 	  		src/air_shed.c \
-	  		src/container.c \
-	  		src/utils.c \
 	  		src/bonus_commands.c \
-	  		src/system_control.c \
-	  		src/system_repair.c \
+			src/cleanup_game.c \
+	  		src/container.c \
+			src/game.c \
 			src/gameplay_1.c \
 			src/gameplay_2.c \
-			src/game.c \
+			src/items.c \
+			src/jump.c \
 			src/my_display_nbrs.c \
-			src/stats.c
+	  		src/my_string.c \
+			src/rand.c \
+			src/readline.c \
+			src/stats.c \
+	  		src/system_control.c \
+	  		src/system_repair.c \
+			src/turns.c \
+	  		src/utils.c \
 
 
 OBJ 	= 	$(SRC:.c=.o)

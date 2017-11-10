@@ -7,6 +7,7 @@
 #define KO 0
 #define OK 1
 
+#define BASE_E_HP 20
 #define BASE_HULL 50
 #define BASE_DMG 10
 #define BASE_ENG 10
@@ -16,6 +17,8 @@
 #define BONUS_DMG 5
 #define BONUS_EVA 3
 #define BONUS_ENG 1
+
+#define MULTIPLIER 1.5
 
 #define LAST_SECTOR 10
 
