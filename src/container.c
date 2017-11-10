@@ -92,6 +92,7 @@ void    get_bonus(t_ship *ship) {
         while (g_func_ptr[idx].command != NULL) {
             if (my_strcmp(g_func_ptr[idx].name, tmp->item) == 0) {
                 g_func_ptr[idx].command(ship);
+                del_freight_from_container(ship, tmp);
             }
             idx++;
         }
