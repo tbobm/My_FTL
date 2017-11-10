@@ -1,29 +1,7 @@
-#include		<stdlib.h>
-#include		<unistd.h>
+#include        <stdlib.h>
+#include        <unistd.h>
 
-const char		*reset_color = "\033[0m";
-
-typedef			struct s_color	t_color;
-
-struct			s_color
-{
-  char			*color;
-  char			*unicode;
-};
-
-static const t_color	g_color[] =
-  {
-    {"clear", "\033[H\033[2J"},
-    {"red", "\033[31m"},
-    {"green", "\033[32m"},
-    {"yellow", "\033[33m"},
-    {"blue", "\033[34m"},
-    {"magenta", "\033[35m"},
-    {"cyan", "\033[36m"},
-    {NULL, NULL}
-  };
-
-void			my_putchar(const char c)
+void            my_putchar(const char c)
 {
   write(1, &c, 1);
 }
@@ -38,14 +16,14 @@ int     my_strlen(const char *str)
   return (i);
 }
 
-void			my_putstr(const char *str)
+void            my_putstr(const char *str)
 {
   write(1, str, my_strlen(str));
 }
 
-int             my_strcmp(const char *s1, const char *s2)
+int     my_strcmp(const char *s1, const char *s2)
 {
-  int			i;
+  int   i;
 
   if (s1 == NULL || s2 == NULL)
     return (-2);
@@ -53,9 +31,9 @@ int             my_strcmp(const char *s1, const char *s2)
   while (s1[i] != '\0')
     {
       if (s1[i] > s2[i])
-	return (1);
+    return (1);
       else if (s1[i] < s2[i])
-	return (-1);
+    return (-1);
       i++;
     }
   if (s2[i] != '\0')
@@ -63,10 +41,10 @@ int             my_strcmp(const char *s1, const char *s2)
   return (0);
 }
 
-char			*my_strdup(const char *str)
+char            *my_strdup(const char *str)
 {
-  int			i;
-  char			*copy;
+  int            i;
+  char            *copy;
   
   i = 0;
   copy = NULL;
