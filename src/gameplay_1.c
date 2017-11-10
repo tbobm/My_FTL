@@ -44,6 +44,7 @@ int    jump(t_game *game)
         game->sector = NULL;
     }
     create_sector(game);
+    game->ship->nav_tools->has_scanned = KO;
     my_putstr("You arrive at sector ");
     my_putnbr(game->ship->nav_tools->sector);
     my_putstr(" Captain.\n");
@@ -71,6 +72,7 @@ int     detect(t_game *game)
             create_freight(game);
             my_putstr("Found a freight\n");
         }
+        game->ship->nav_tools->has_scanned = OK;
     }
     return (0);
 }
