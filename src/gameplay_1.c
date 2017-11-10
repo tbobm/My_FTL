@@ -4,7 +4,8 @@
  * Attack the enemy if possible,
  * then manage the enemy's attack
  */
-int    attack(t_game *game) {
+int    attack(t_game *game) 
+{
     if (game->sector->enemy == NULL) {
         my_putstr("No enemy\n");
         return (0);
@@ -21,7 +22,8 @@ int    attack(t_game *game) {
 /*
  * Switch to next sector
  */
-int    jump(t_game *game) {
+int    jump(t_game *game) 
+{
     my_putstr("You try to jump...\n");
     if (game->sector->enemy != NULL) {
         my_putstr("But an enemy is blocking the way\n");
@@ -41,7 +43,8 @@ int    jump(t_game *game) {
 /*
  * Collect freight - detect command
  */
-int     detect(t_game *game) {
+int     detect(t_game *game) 
+{
     int i;
 
     i = 0;
@@ -64,7 +67,8 @@ int     detect(t_game *game) {
 /*
  * Collect bonuses
  */
-int     bonus(t_game *game) {
+int     bonus(t_game *game) 
+{
     my_putstr("Collecting freights...\n"); /* TODO: REMOVE */
     get_bonus(game->ship);
     return (0);

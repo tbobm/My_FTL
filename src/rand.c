@@ -1,7 +1,7 @@
 #include "ftl.h"
 
 int     generate_nbr(int min, int max) {
-    return ((random() % (max - min)) + min);
+    return ((random() % max) + min);
 }
 
 int     get_percent(int percentage) {

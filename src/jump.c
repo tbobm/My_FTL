@@ -1,6 +1,7 @@
 #include "ftl.h"
 
-void    create_enemy(t_game *game) {
+void        create_enemy(t_game *game) 
+{
     t_enemy *enemy;
 
     if (game->sector->enemy != NULL) {
@@ -17,7 +18,8 @@ void    create_enemy(t_game *game) {
     game->sector->enemy = enemy;
 }
 
-void    create_sector(t_game *game) {
+void            create_sector(t_game *game) 
+{
     t_sector    *sector;
 
     if (game->sector != NULL) {

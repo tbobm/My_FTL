@@ -8,7 +8,8 @@
  *  game
  *  NULL if something goes wrong while malloc'ing
  */
-t_game  *create_game() {
+t_game      *create_game() 
+{
     t_game  *game;
 
     game = malloc(sizeof(t_game));
@@ -16,6 +17,7 @@ t_game  *create_game() {
         return (NULL);
     }
     game->ship = create_ship();
+    game->sector = NULL;
     if (game->ship == NULL) {
         return (NULL);
     }
@@ -35,8 +37,8 @@ t_game  *create_game() {
  *  ship
  *  NULL if anything fails
  */
-t_ship  *setup_ship() {
-    t_ship *ship;
+t_ship      *setup_ship() {
+    t_ship  *ship;
 
     ship = create_ship();
     if (ship == NULL) {
@@ -55,8 +57,8 @@ t_ship  *setup_ship() {
  *
  * manage user input and leaving the game
  */
-void     game_loop(t_game *game) {
-    int player_exit;
+void        game_loop(t_game *game) {
+    int     player_exit;
 
     player_exit = KO;
     while ((can_continue(game) == OK) && (player_exit == KO)) {

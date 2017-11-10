@@ -1,6 +1,7 @@
 #include "ftl.h"
 
-void    create_freight(t_game *game) {
+void            create_freight(t_game *game) 
+{
     t_freight   *freight;
     int         res;
 
@@ -9,7 +10,6 @@ void    create_freight(t_game *game) {
         my_putstr("Could not create freight.\n");
         return ;
     }
-
     res = generate_nbr(0, 100);
     if (get_percent(30)) {
         if (res < 33) {

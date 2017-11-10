@@ -1,23 +1,3 @@
-/*
-** Ce fichier contient les fonctions de bases pour gérer des strings (les chaines de caractères).
-**
-** my_putchar vous permet d'afficher un caractère sour la sortie standard.
-** 
-** my_strlen renvoie la taille d'une string.
-**
-** my_putstr vous permet d'afficher une string sur la sortie standard.
-**
-** my_strcmp vous permet de comparer deux strings si ces strings sont égales alors
-** la fonction renvoie 0.
-**
-** my_strdup vous permet d'allouer dynamiquement une chaine de caractères et de copier la valeur de
-** la chaine passé en paramètre et de renvoyer cette chaine.
-**
-** my_putstr_color vous permet d'afficher une string sur la sortie standard de la couleur souhaitée.
-** les couleurs disponibles pour cette fonction sont rouge (red), vert (green), jaune (yellow),
-** bleu (blue), violet (magenta), et bleu cyan (cyan), elle vous permet également d'effacer
-** tout ce qui est actuellement affiché à l'écran (clear) avant d'afficher votre chaine de caractères.
-*/
 #include		<stdlib.h>
 #include		<unistd.h>
 
@@ -48,9 +28,9 @@ void			my_putchar(const char c)
   write(1, &c, 1);
 }
 
-int			my_strlen(const char *str)
+int     my_strlen(const char *str)
 {
-  int			i;
+  int   i;
 
   i = 0;
   while (str[i] != '\0')
@@ -63,7 +43,7 @@ void			my_putstr(const char *str)
   write(1, str, my_strlen(str));
 }
 
-int			my_strcmp(const char *s1, const char *s2)
+int             my_strcmp(const char *s1, const char *s2)
 {
   int			i;
 
@@ -99,21 +79,4 @@ char			*my_strdup(const char *str)
     }
   copy[i] = '\0';
   return (copy);
-}
-
-void			my_putstr_color(const char *color, const char *str)
-{
-  int			i;
-
-  i = 0;
-  while (g_color[i].color != NULL && (my_strcmp(g_color[i].color, color) != 0))
-    i++;
-  if (g_color[i].color == NULL)
-    {
-      my_putstr(str);
-      return ;
-    }
-  my_putstr(g_color[i].unicode);
-  my_putstr(str);
-  my_putstr(reset_color);
 }

@@ -1,6 +1,7 @@
 #include "ftl.h"
 
-static const t_input_commands g_input_commands[] = {
+static const t_input_commands g_input_commands[] = 
+{
     {"attack", attack},
     {"detect", detect},
     {"jump", jump},
@@ -13,9 +14,10 @@ static const t_input_commands g_input_commands[] = {
 };
 
 
-int     get_input(t_game *game) {
+int         get_input(t_game *game) 
+{
     char    *input;
-    int i;
+    int     i;
 
     i = 0;
     input = my_readline();
