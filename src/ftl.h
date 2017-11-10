@@ -1,6 +1,8 @@
 #ifndef __FTL_H__
 #define __FTL_H__
 #include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
 
 #include "consts.h"
 #include "my_string.h"
@@ -152,5 +154,13 @@ int     has_energy(t_game*);
 int     is_at_last_sector(t_game*);
 int     has_won(t_game*);
 int     can_continue(t_game*);
+
+int     player_attack(t_game*);
+int     enemy_is_alive(t_game*);
+
+/* Stats */
+int     generate_nbr(int, int);
+int     get_percent(int);
+
 
 #endif /* __FTL_H__ */

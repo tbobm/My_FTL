@@ -4,8 +4,12 @@
  * Attack current enemy
  */
 int    attack(t_game *game) {
-    my_putstr(game->ship->name);
-    my_putstr("ATTACK\n"); /* TODO: REMOVE */
+    if (game->sector->enemy == NULL) {
+        my_putstr("No enemy"); /* TODO */
+        return (0);
+    }
+
+    
     return (0);
 }
 
