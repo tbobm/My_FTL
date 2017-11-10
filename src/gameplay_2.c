@@ -37,8 +37,6 @@ int     control(t_game *game)
 {
     my_putstr("Activating control interface...\n");
     system_control(game->ship);
-    my_putstr(game->ship->name);
-    my_putchar('\n');
     return (0);
 }
 
