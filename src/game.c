@@ -24,6 +24,7 @@ t_game  *create_game() {
 	add_navigation_tools_to_ship(game->ship);
 	add_container_to_ship(game->ship);
     game->kill_count = 0;
+    game->sector = NULL;
     create_sector(game);
     return (game);
 }
@@ -60,7 +61,7 @@ void     game_loop(t_game *game) {
 
     player_exit = KO;
     while ((can_continue(game) == OK) && (player_exit == KO)) {
-        disp_prompt();
+        disp_prompt(game);
         player_exit = get_input(game);
     }
 }
