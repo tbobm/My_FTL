@@ -15,7 +15,7 @@ void    create_freight(t_game *game) {
         if (res < 33) {
             freight->item = my_strdup("energy");
         } else if (res < 66) {
-            freight->item = my_strdup("evade");
+            freight->item = my_strdup("evadebonus");
         } else if (res < 99) {
             freight->item = my_strdup("attackbonus");
         } else {
