@@ -1,10 +1,24 @@
 #include "ftl.h"
 
+/*
+ * Creates a game structure
+ * Instatiantes ship and first sector
+ * 
+ * return:
+ *  game
+ *  NULL if something goes wrong while malloc'ing
+ */
 t_game  *create_game() {
     t_game  *game;
 
     game = malloc(sizeof(t_game));
+    if (game == NULL) {
+        return (NULL);
+    }
     game->ship = create_ship();
+    if (game->ship == NULL) {
+        return (NULL);
+    }
 	add_weapon_to_ship(game->ship);
 	add_ftl_drive_to_ship(game->ship);
 	add_navigation_tools_to_ship(game->ship);
@@ -14,18 +28,33 @@ t_game  *create_game() {
     return (game);
 }
 
+/*
+ * Adds components to the ship
+ *
+ * return:
+ *  ship
+ *  NULL if anything fails
+ */
 t_ship  *setup_ship() {
     t_ship *ship;
 
     ship = create_ship();
+    if (ship == NULL) {
+        return (NULL);
+    }
     add_weapon_to_ship(ship);
     add_ftl_drive_to_ship(ship);
     add_navigation_tools_to_ship(ship);
     add_container_to_ship(ship);
-    name_ship(ship);
+    ship->name = my_strdup(SHIP_NAME);
     return (ship);
 }
 
+/*
+ * Main loop
+ *
+ * manage user input and leaving the game
+ */
 void     game_loop(t_game *game) {
     int player_exit;
 
@@ -36,6 +65,11 @@ void     game_loop(t_game *game) {
     }
 }
 
+/*
+ * Display prompt and some info
+ *
+ * (sector, energy)
+ */
 void    disp_prompt(t_game *game) {
     my_putstr("You're in sector ");
     my_putnbr(game->ship->nav_tools->sector);

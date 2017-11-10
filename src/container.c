@@ -1,5 +1,12 @@
 #include "ftl.h"
 
+static const t_bonus g_func_ptr[] = {
+    {"attackbonus", fun_attackbonus},
+    {"evadebonus", fun_evadebonus},
+    {"energy", fun_energy},
+    {NULL, NULL}
+};
+
 /*
  * Instantiates a container, and adds it to `ship`
  *
@@ -13,14 +20,6 @@
  *  KO: 0
  *  OK: 1
  */
-
-static const t_bonus g_func_ptr[] = {
-    {"attackbonus", fun_attackbonus},
-    {"evadebonus", fun_evadebonus},
-    {"energy", fun_energy},
-    {NULL, NULL}
-};
-
 int add_container_to_ship(t_ship *ship) {
     t_container *container;
 
@@ -84,10 +83,10 @@ void    get_bonus(t_ship *ship) {
     t_freight   *tmp;
     int         idx;
 
-    if (ship->container->first == NULL) {
-        return;
-    }
     idx = 0;
+    if (ship->container->first == NULL) {
+        return ;
+    }
     tmp = ship->container->first;
     while (tmp != NULL) {
         while (g_func_ptr[idx].command != NULL) {

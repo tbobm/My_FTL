@@ -3,6 +3,7 @@
 void    display_evade(t_ship *ship) {
     my_putstr("Evade: ");
     my_putnbr(ship->nav_tools->evade);
+    my_putchar('\n');
 }
 
 void    display_hull(t_ship *ship) {

@@ -23,8 +23,11 @@ t_ship  *create_ship() {
     my_ship->ftl_drive = NULL;
     my_ship->nav_tools = NULL;
     my_ship->container = NULL;
-
+    my_ship->name = my_strdup(SHIP_NAME);
     my_putstr(TXT_SHIP_OK);
+    my_putstr("[ANNOUNCEMENT] Welcome aboard the ");
+    my_putstr(my_ship->name);
+    my_putstr(" Captain.\n");
     return (my_ship);
 }
 
@@ -107,8 +110,4 @@ int     add_navigation_tools_to_ship(t_ship *ship) {
     ship->nav_tools->system_state = my_strdup(TXT_SYS_ON);
     ship->nav_tools->has_scanned = KO;
     return (OK);
-}
-
-void    name_ship(t_ship *ship) {
-    ship->name = my_strdup(SHIP_NAME);
 }

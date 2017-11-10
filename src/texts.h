@@ -1,7 +1,7 @@
 #ifndef __TEXTS_H__
 #define __TEXTS_H__
 
-#define SHIP_NAME "Nebuchadnezzar\n"
+#define SHIP_NAME "Nebuchadnezzar"
 
 /* Prompt */
 #define PROMPT "repair_system ~~> "

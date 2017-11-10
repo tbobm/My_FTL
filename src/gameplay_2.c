@@ -13,9 +13,8 @@ int     game_exit(t_game *game) {
  * Calls system_repair
  */
 int     repair(t_game *game) {
+    my_putstr("Preparing reparation interface...\n");
     system_repair(game->ship);
-    my_putstr(game->ship->name);
-    my_putstr("REPAIR\n"); /* TODO: REMOVE */
     return (0);
 }
 
@@ -33,7 +32,9 @@ int     control(t_game *game) {
  * Displays stats
  */
 int     stats(t_game *game) {
-    my_putstr("STATS\n"); /* TODO: REMOVE */
+    my_putstr("Displaying ");
+    my_putstr(game->ship->name);
+    my_putstr(" stats...\n");
     display_stats(game->ship);
     return (0);
 }

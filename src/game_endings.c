@@ -1,13 +1,24 @@
 #include "ftl.h"
 
+/*
+ * Returns if hull points are > 0
+ */
 int     is_alive(t_game *game) {
     return (game->ship->hull > 0);
 }
 
-int     has_energy(t_game *game) { /* TODO: Check freights */
+/*
+ * Checks if ship as positive energy
+ */
+int     has_energy(t_game *game) {
     return (game->ship->ftl_drive->energy > 0);
 }
 
+/*
+ * Winning condition management
+ *
+ * Checks if ship is at LAST_SECTOR, then displays final stats
+ */
 int     has_won(t_game *game) {
     if (game->ship->nav_tools->sector == LAST_SECTOR) {
         my_putstr(WIN_TXT);
