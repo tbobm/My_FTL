@@ -7,40 +7,34 @@
 #define PROMPT "repair_system ~~> "
 
 /* Ships */
-#define TXT_SHIP_OK "amelioration du vaisseau termine!\n"
-#define TXT_SHIP_BEGIN "construction du vaisseau en cours...\n"
-#define TXT_ERR_SHIP "le vaisseau n'a\
-pas pu etre construit par manque de materiaux\n"
+#define TXT_SHIP_BEGIN "[INFO] BUILDING SHIP\n"
+#define TXT_SHIP_OK "[SUCCESS] SHIP SUCCESSFULLY BUILT\n"
+#define TXT_ERR_SHIP "[FAILURE] COULD NOT BUILD SHIP: NOT ENOUGH MATERIALS\n"
 
 /* Weapons */
-#define TXT_WEAP_BEGIN "ajout des armes en cours...\n"
-#define TXT_WEAP_OK "les armes on ete ajoutes avec succes!\n"
-#define TXT_WEAP_ERR "votre vaisseau a explose quand vous avez\
-tente d'ajouter les armes\n"
+#define TXT_WEAP_BEGIN "[INFO] ADDING WEAPONS...\n"
+#define TXT_WEAP_OK "[SUCCESS] WEAPONS ARMED AND LOADED\n"
+#define TXT_WEAP_ERR "[FAILURE] WEAPONS EXPLODED WHILE BEING LOADED\n"
 
 /* Ftl drive */
-#define TXT_FTL_BEGIN "ajout du reacteur en cours...\n"
-#define TXT_FTL_OK "le reacteur a ete ajoute avec succes!\n"
-#define TXT_FTL_ERR "votre vaisseau a explose lorsque vous avez \
-pose le reacteur\n"
+#define TXT_FTL_BEGIN "[INFO] ADDING FTL DRIVE...\n"
+#define TXT_FTL_OK "[SUCCESS] FTL DRIVE ENABLED\n"
+#define TXT_FTL_ERR "[ERROR] FTL DRIVE BLEW UP\n"
 
 /* Navigation tools */
-#define TXT_NAV_BEGIN "ajout des outils de navigations...\n"
-#define TXT_NAV_OK "les outils de navigations ont ete ajoutes \
-avec succes!\n"
-#define TXT_NAV_ERR "votre vaisseau a explose lorsque vous avez \
-pose les outils de navigations\n"
+#define TXT_NAV_BEGIN "[INFO] ADDING NAVIGATION TOOLS...\n"
+#define TXT_NAV_OK "[SUCCESS] NAVIGATION TOOLS ONLINE\n"
+#define TXT_NAV_ERR "[ERROR] NAVIGATION TOOLS CRASHED THE WHOLE SHIP\n"
 
 /* Containers */
-#define TXT_CON_BEGIN "ajout du container en cours...\n"
-#define TXT_CON_OK "le container a ete ajoute avec succes!\n"
-#define TXT_CON_ERR "votre vaisseau a explose lorsque vous avez \
-pose le container\n"
+#define TXT_CON_BEGIN "[INFO] ADDING CONTAINER...\n"
+#define TXT_CON_OK "[SUCCESS] CONTAINER IS ATTACHED\n"
+#define TXT_CON_ERR "[ERROR] CONTAINER LOADING CREATED A HULL BREACH\n"
 
 /* System states */
 #define TXT_SYS_ON "online"
 
-#define CHK_FTL_BEG "verification du reacteur en cours...\n"
+#define CHK_FTL_BEG "[INFO] Checking FTL drive...\n"
 #define CHK_FTL_OK "reacteur OK!\n"
 #define CHK_FTL_HS "reacteur hors service!\n"
 

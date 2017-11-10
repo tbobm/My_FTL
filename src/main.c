@@ -18,6 +18,7 @@ int main(void) {
 }
 */
 
+/*
 int main() {
 	t_ship* ship = NULL;
 
@@ -129,14 +130,6 @@ int main() {
 		printf("%s", "LA LISTE EST VIDE\n");
 	}
 
-    /*
-	printf("%s", "-----------DISPLAY CONTAINERS\n");
-	printf("%s\n", ship->container->first->item);
-	printf("%s", "-----------DISPLAY CONTAINERS\n");
-	printf("%s\n", ship->container->last->item);
-	printf("%s", "-----------DISPLAY CONTAINERS\n");
-	printf("%d\n", ship->container->nb_elem);
-    */
     
     system_control(ship);
     system_repair(ship);
@@ -144,4 +137,12 @@ int main() {
 	free_ship(ship);
 
 	return (0);
+}
+*/
+int main(void) {
+    t_game  *game;
+
+    game = create_game();
+    game_loop(game);
+    return (0);
 }

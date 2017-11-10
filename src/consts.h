@@ -12,7 +12,7 @@
 #define BASE_DMG 10
 #define BASE_ENG 10
 #define BASE_EVA 25
-#define BASE_SEC 0
+#define BASE_SEC -1
 
 #define BONUS_DMG 5
 #define BONUS_EVA 3

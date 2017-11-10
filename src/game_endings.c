@@ -12,9 +12,9 @@ int     has_won(t_game *game) {
     if (game->ship->nav_tools->sector == LAST_SECTOR) {
         my_putstr(WIN_TXT);
         display_stats(game->ship);
-        return (OK);
+        return (KO);
     }
-    return (KO);
+    return (OK);
 }
 
 /*
@@ -27,11 +27,14 @@ int     has_won(t_game *game) {
  */
 int     can_continue(t_game *game) {
     if (!is_alive(game)) {
+        my_putstr("Your hull is crushed. You die floating in space.\n");
         return (KO);
     }
 
     if ((has_energy(game) == KO) && !(has_won(game) == KO)) { 
+        my_putstr("No more energy. You end up alone, starving.\n");
         return (KO);
     }
+
     return (has_won(game));
 }

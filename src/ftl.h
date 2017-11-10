@@ -7,6 +7,7 @@
 #include "consts.h"
 #include "my_string.h"
 #include "texts.h"
+#include "macros.h"
 
 /* Declaration of the used structures */
 /* Ship-related structs */
@@ -96,7 +97,7 @@ struct          s_game {
 };
 
 struct      s_input_commands {
-    char    *cmd;
+    char    *name;
     int     (*command)(t_game*);
 };
 
@@ -167,5 +168,8 @@ int     generate_nbr(int, int);
 int     get_percent(int);
 float   my_pow(float, float);
 
+/* Game loop */
+int     get_input(t_game*);
+void    game_loop(t_game*);
 
 #endif /* __FTL_H__ */
