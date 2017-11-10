@@ -21,17 +21,22 @@ typedef struct s_bonus t_bonus;
 /* Repair commands */
 typedef struct s_repair_command t_repair_command;
 
+/* Game structs */
+typedef struct s_sector t_sector;
+typedef struct s_enemy t_enemy;
+typedef struct s_game t_game;
+typedef struct s_input_commands t_input_commands;
 
 /* Definition of the different structures */
-struct      s_navigation_tools {
-    char    *system_state;
-    int     sector;
-    int     evade;
+struct          s_navigation_tools {
+    char        *system_state;
+    int         sector;
+    int         evade;
 };
 
-struct      s_weapon {
-    char    *system_state;
-    int     damage;
+struct          s_weapon {
+    char        *system_state;
+    int         damage;
 };
 
 struct          s_ftl_drive {
@@ -59,14 +64,36 @@ struct                  s_ship {
     t_container         *container;
 };
 
-struct      s_bonus {
-    char    *name;
-    void    (*command)(t_ship*);
+struct          s_bonus {
+    char        *name;
+    void        (*command)(t_ship*);
 };
 
-struct      s_repair_command {
-    char    *command_name;
-    void    (*command)(t_ship*);
+struct          s_repair_command {
+    char        *command_name;
+    void        (*command)(t_ship*);
+};
+
+struct          s_enemy {
+    char        *name;
+    int         damage;
+    int         hull;
+};
+
+struct          s_sector {
+    int         lvl;
+    t_enemy     *enemy;
+};
+
+struct          s_game {
+    t_ship      *ship;
+    t_sector    *sector;
+    int         kill_count;
+};
+
+struct      s_input_commands {
+    char    *cmd;
+    int     (*command)(t_game*);
 };
 
 /* Prototypes */
@@ -105,5 +132,14 @@ void    display_energy(t_ship*);
 void    display_evade(t_ship*);
 void    display_damage(t_ship*);
 void    display_stats(t_ship*);
+
+int     scan(t_game*);
+int     attack(t_game*);
+int     bonus(t_game*);
+int     jump(t_game*);
+int     repair(t_game*);
+int     control(t_game*);
+int     stats(t_game*);
+int     game_exit(t_game*);
 
 #endif /* __FTL_H__ */

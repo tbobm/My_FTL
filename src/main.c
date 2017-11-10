@@ -150,6 +150,7 @@ int main() {
     
     system_control(ship);
     system_repair(ship);
+    display_stats(ship);
 	free_ship(ship);
 
 	return (0);

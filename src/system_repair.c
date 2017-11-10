@@ -58,7 +58,10 @@ void    system_repair(t_ship *ship) {
     int     command_found;
 
     my_putstr(PROMPT);
-    input = my_readline();
+    if (!(input = my_readline())) {
+        my_putstr(COMMAND_ERR);
+        return;
+    }
     idx = 0;
     command_found = 0;
     while (g_repair_commands[idx].command_name != NULL) {
@@ -68,9 +71,8 @@ void    system_repair(t_ship *ship) {
         }
         idx++;
     }
-    if (command_found == OK) {
-        my_putstr(COMMAND_FOUND);
-    } else {
+    if (command_found != OK) {
         my_putstr(COMMAND_NOT_FOUND);
     }
+    free(input);
 }

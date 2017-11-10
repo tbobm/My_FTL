@@ -64,7 +64,8 @@ pose le container\n"
 #define REP_WEAP_ERR "les reparations du systeme d'armement ont echoue\n"
 
 /* Commands */
-#define COMMAND_FOUND "[SYSTEM FAILURE] : le lecteur de commande est bloque\n"
+#define COMMAND_ERR "[SYSTEM FAILURE] : le lecteur de commande est bloque\n"
 #define COMMAND_NOT_FOUND "[SYSTEM FAILURE] : commande inconnue\n"
+#define INPUT_ERR "[INPUT FAILURE] : commande non interpretable\n"
 
 #endif /* __TEXTS_H__ */
