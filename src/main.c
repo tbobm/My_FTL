@@ -149,6 +149,7 @@ int main() {
     */
     
     system_control(ship);
+    system_repair(ship);
 	free_ship(ship);
 
 	return (0);

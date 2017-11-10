@@ -95,8 +95,15 @@ void    ftl_drive_check(t_ship*);
 void    navigation_tools_system_check(t_ship*);
 void    weapon_system_check(t_ship*);
 
+void    system_repair(t_ship*);
 void    ftl_drive_system_repair(t_ship*);
 void    weapon_system_repair(t_ship*);
 void    navigation_tools_system_repair(t_ship*);
+
+void    display_hull(t_ship*);
+void    display_energy(t_ship*);
+void    display_evade(t_ship*);
+void    display_damage(t_ship*);
+void    display_stats(t_ship*);
 
 #endif /* __FTL_H__ */

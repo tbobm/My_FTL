@@ -1,6 +1,9 @@
 #ifndef __CONSTS_H__
 #define __CONSTS_H__
 
+#define MIN_INT -2147483648
+#define STR_MIN_INT "-2147483648"
+
 #define KO 0
 #define OK 1
 
