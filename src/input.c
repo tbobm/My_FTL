@@ -23,7 +23,6 @@ static const t_input_commands g_input_commands[] =
     {NULL, NULL}
 };
 
-
 int         get_input(t_game *game) 
 {
     char    *input;

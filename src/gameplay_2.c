@@ -52,5 +52,3 @@ int     stats(t_game *game)
     display_stats(game->ship);
     return (0);
 }
-
-
