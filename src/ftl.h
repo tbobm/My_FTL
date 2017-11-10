@@ -1,3 +1,13 @@
+/*
+** ftl.h for my_ftl in /home/theo/usr/etna2020/src
+**
+** Made by Theo Massard
+** Login   <massar_t@etna-alternance.net>
+**
+** Started on  Fri Nov  10 19:38:09 2017 Theo Massard
+** Last update Fri Nov  10 19:38:09 2017 Theo Massard
+*/
+
 #ifndef __FTL_H__
 #define __FTL_H__
 #include <stdlib.h>

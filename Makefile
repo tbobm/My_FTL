@@ -1,3 +1,13 @@
+##
+## Makefile for my_ftl in /home/theo/usr/etna2020
+##
+## Made by Theo Massard
+## Login   <massar_t@etna-alternance.net>
+##
+## Started on  Fri Nov  10 21:33:56 2017 Theo Massard
+## Last update Fri Nov  10 21:33:56 2017 Theo Massard
+##
+
 CC		=   gcc
 CFLAGS	=   -W -Wall -Werror -pedantic
 RM		=   rm -f

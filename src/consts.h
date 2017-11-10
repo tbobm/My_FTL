@@ -1,3 +1,13 @@
+/*
+** consts.h for my_ftl in /home/theo/usr/etna2020/src
+**
+** Made by Theo Massard
+** Login   <massar_t@etna-alternance.net>
+**
+** Started on  Fri Nov  10 22:10:52 2017 Theo Massard
+** Last update Fri Nov  10 22:10:52 2017 Theo Massard
+*/
+
 #ifndef __CONSTS_H__
 # define __CONSTS_H__
 

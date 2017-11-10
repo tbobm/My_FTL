@@ -1,3 +1,13 @@
+/*
+** items.c for my_ftl in /home/theo/usr/etna2020/src
+**
+** Made by Theo Massard
+** Login   <massar_t@etna-alternance.net>
+**
+** Started on  Fri Nov  10 22:37:04 2017 Theo Massard
+** Last update Fri Nov  10 22:37:04 2017 Theo Massard
+*/
+
 #include "ftl.h"
 
 void            create_freight(t_game *game) 

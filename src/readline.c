@@ -2,7 +2,7 @@
 ** Cette fonction permet de récuper une ligne
 ** de moins de 50 caractères sur l'entrée standard.
 ** La fonction ne prend pas de paramètre et renvoit une chaîne
-** allouée (pensez a free()).
+** Last update Thu Nov  9 21:57:06 2017 Theo Massard
 */
 #include	<stdlib.h>
 #include	<unistd.h>

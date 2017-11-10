@@ -1,3 +1,13 @@
+/*
+** jump.c for my_ftl in /home/theo/usr/etna2020/src
+**
+** Made by Theo Massard
+** Login   <massar_t@etna-alternance.net>
+**
+** Started on  Fri Nov  10 21:39:08 2017 Theo Massard
+** Last update Fri Nov  10 21:39:08 2017 Theo Massard
+*/
+
 #include "ftl.h"
 
 void        create_enemy(t_game *game) 

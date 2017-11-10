@@ -1,3 +1,13 @@
+/*
+** stats.c for my_ftl in /home/theo/usr/etna2020/src
+**
+** Made by Theo Massard
+** Login   <massar_t@etna-alternance.net>
+**
+** Started on  Fri Nov  10 20:06:28 2017 Theo Massard
+** Last update Fri Nov  10 20:06:28 2017 Theo Massard
+*/
+
 #include "ftl.h"
 
 void    display_evade(t_ship *ship) {
