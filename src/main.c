@@ -144,5 +144,6 @@ int main(void) {
 
     game = create_game();
     game_loop(game);
+    free_game(game);
     return (0);
 }

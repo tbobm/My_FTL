@@ -119,6 +119,7 @@ void    free_ftl_drive(t_ftl_drive*);
 void    free_nav_tools(t_navigation_tools*);
 void    free_container(t_container*);
 void    free_freight(t_freight*);
+void    free_game(t_game*);
 
 void    fun_attackbonus(t_ship*);
 void    fun_evadebonus(t_ship*);
@@ -171,5 +172,6 @@ float   my_pow(float, float);
 /* Game loop */
 int     get_input(t_game*);
 void    game_loop(t_game*);
+void    disp_prompt();
 
 #endif /* __FTL_H__ */

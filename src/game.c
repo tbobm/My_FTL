@@ -31,7 +31,7 @@ void     game_loop(t_game *game) {
 
     player_exit = KO;
     while ((can_continue(game) == OK) && (player_exit == KO)) {
-        my_putstr("~~>");
+        disp_prompt();
         player_exit = get_input(game);
     }
 }
@@ -41,5 +41,6 @@ void    disp_prompt(t_game *game) {
     my_putnbr(game->ship->nav_tools->sector);
     my_putstr(" and you have ");
     my_putnbr(game->ship->ftl_drive->energy);
-    my_putstr(" energy left.");
+    my_putstr(" energy left.\n");
+    my_putstr("~~> ");
 }

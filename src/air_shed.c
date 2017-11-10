@@ -103,7 +103,6 @@ int     add_navigation_tools_to_ship(t_ship *ship) {
 
     my_putstr(TXT_NAV_OK);
     ship->nav_tools->sector = BASE_SEC;
-    my_putnbr(ship->nav_tools->sector);
     ship->nav_tools->evade = BASE_EVA;
     ship->nav_tools->system_state = my_strdup(TXT_SYS_ON);
     ship->nav_tools->has_scanned = KO;

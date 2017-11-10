@@ -35,34 +35,34 @@
 #define TXT_SYS_ON "online"
 
 #define CHK_FTL_BEG "[INFO] Checking FTL drive...\n"
-#define CHK_FTL_OK "reacteur OK!\n"
-#define CHK_FTL_HS "reacteur hors service!\n"
+#define CHK_FTL_OK "[OK] FTL drive checked\n"
+#define CHK_FTL_HS "[ERROR] FTL drive shut down\n"
 
-#define CHK_NAV_BEG "verification du systeme de navigation en cours...\n"
-#define CHK_NAV_OK "systeme de navigation OK!\n"
-#define CHK_NAV_HS "systeme de navigation hors service!\n"
+#define CHK_NAV_BEG "[INFO] Checking navigation tools...\n"
+#define CHK_NAV_OK "[OK] Navigation tools are on\n"
+#define CHK_NAV_HS "[ERROR] Navigation tools aren't available\n"
 
-#define CHK_WEAP_BEG "verification du systeme d'armement en cours...\n"
-#define CHK_WEAP_OK "systeme d'armement OK!\n"
-#define CHK_WEAP_HS "systeme d'armement hors service!\n"
+#define CHK_WEAP_BEG "[INFO] Checking weapon system\n"
+#define CHK_WEAP_OK "[OK] Weapons are online\n"
+#define CHK_WEAP_HS "[ERROR] Weapons are shut down\n"
 
 /* System repairs */
-#define REP_FTL_BEG "reparation du reacteur en cours...\n"
-#define REP_FTL_OK "reparation termine! systeme reacteur OK!\n"
-#define REP_FTL_ERR "les reparations du reacteur ont echoue\n" 
+#define REP_FTL_BEG "[INFO] Fixing FTL drive...\n"
+#define REP_FTL_OK "[OK] FTL drive fixed\n"
+#define REP_FTL_ERR "[ERROR] FTL drive fix failed\n" 
 
-#define REP_NAV_BEG "reparation du systeme de navigation en cours...\n"
-#define REP_NAV_OK "reparation termine! systeme de navigation OK!\n"
-#define REP_NAV_ERR "les reparations des outils de navigations ont echoue\n"
+#define REP_NAV_BEG "[INFO] Fixing navigation tools...\n"
+#define REP_NAV_OK "[OK] Navigation tools fixed\n"
+#define REP_NAV_ERR "[ERROR] Something went wrong while fixing nav tools\n"
 
-#define REP_WEAP_BEG "reparation du systeme d'armement en cours...\n"
-#define REP_WEAP_OK "reparation termine! systeme d'armement OK!\n"
-#define REP_WEAP_ERR "les reparations du systeme d'armement ont echoue\n"
+#define REP_WEAP_BEG "[INFO] Fixing weapons...\n"
+#define REP_WEAP_OK "[OK] Weapon fixed\n"
+#define REP_WEAP_ERR "[ERROR] Could not fix weapons\n"
 
 /* Commands */
-#define COMMAND_ERR "[SYSTEM FAILURE] : le lecteur de commande est bloque\n"
-#define COMMAND_NOT_FOUND "[SYSTEM FAILURE] : commande inconnue\n"
-#define INPUT_ERR "[INPUT FAILURE] : commande non interpretable\n"
+#define COMMAND_ERR "[SYSTEM FAILURE] Command reader is locked\n"
+#define COMMAND_NOT_FOUND "[SYSTEM FAILURE] Unkown command\n"
+#define INPUT_ERR "[INPUT FAILURE] Could not interpret command\n"
 
 /* Game texts */
 #define WIN_TXT "You managed to survived every sector. You won. :) \n"
