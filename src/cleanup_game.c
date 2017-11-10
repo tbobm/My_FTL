@@ -13,7 +13,7 @@
 /*
  * Frees everything ship-related
  */
-void    free_ship(t_ship *ship) 
+void    free_ship(t_ship *ship)
 {
     free_weapon(ship->weapon);
     free_ftl_drive(ship->ftl_drive);
@@ -25,7 +25,7 @@ void    free_ship(t_ship *ship)
 /*
  * Frees the game
  */
-void    free_game(t_game *game) 
+void    free_game(t_game *game)
 {
     free_ship(game->ship);
     free(game);

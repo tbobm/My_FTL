@@ -10,7 +10,7 @@
 
 #include "ftl.h"
 
-static const t_input_commands g_input_commands[] = 
+static const t_input_commands g_input_commands[] =
 {
     {"attack", attack},
     {"detect", detect},
@@ -23,7 +23,7 @@ static const t_input_commands g_input_commands[] =
     {NULL, NULL}
 };
 
-int         get_input(t_game *game) 
+int         get_input(t_game *game)
 {
     char    *input;
     int     i;

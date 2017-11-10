@@ -10,7 +10,7 @@
 
 #include "ftl.h"
 
-int main(void) 
+int main(void)
 {
     t_game  *game;
 

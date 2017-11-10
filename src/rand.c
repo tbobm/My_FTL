@@ -10,15 +10,18 @@
 
 #include "ftl.h"
 
-int     generate_nbr(int min, int max) {
+int     generate_nbr(int min, int max)
+{
     return ((random() % max) + min);
 }
 
-int     get_percent(int percentage) {
+int     get_percent(int percentage)
+{
     return (generate_nbr(0, 100) < percentage);
 }
 
-float   my_pow(float x, float n) {
+float   my_pow(float x, float n)
+{
 	int i;
 
 	i = 0;

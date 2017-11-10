@@ -17,7 +17,8 @@ static const t_repair_command g_repair_commands[] = {
     {NULL, NULL}
 };
 
-void    ftl_drive_system_repair(t_ship *ship) {
+void    ftl_drive_system_repair(t_ship *ship)
+{
     char    *str;
 
     free(ship->ftl_drive->system_state);
@@ -32,7 +33,8 @@ void    ftl_drive_system_repair(t_ship *ship) {
     my_putstr(REP_FTL_OK);
 }
 
-void    navigation_tools_system_repair(t_ship *ship) {
+void    navigation_tools_system_repair(t_ship *ship)
+{
     char    *str;
 
     free(ship->nav_tools->system_state);
@@ -47,7 +49,8 @@ void    navigation_tools_system_repair(t_ship *ship) {
     my_putstr(REP_NAV_OK);
 }
 
-void    weapon_system_repair(t_ship *ship) {
+void    weapon_system_repair(t_ship *ship)
+{
     char    *str;
 
     free(ship->nav_tools->system_state);
@@ -62,7 +65,8 @@ void    weapon_system_repair(t_ship *ship) {
     my_putstr(REP_WEAP_OK);
 }
 
-void    system_repair(t_ship *ship) {
+void    system_repair(t_ship *ship)
+{
     char    *input;
     int     idx;
     int     command_found;

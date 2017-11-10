@@ -19,7 +19,7 @@
  *  NULL: Could not allocate memory
  *  t_ship*: the allocated ship
  */
-t_ship  *create_ship() 
+t_ship  *create_ship()
 {
     t_ship *my_ship;
 
@@ -53,7 +53,7 @@ t_ship  *create_ship()
  *  KO: 0
  *  OK: 1
  */
-int     add_weapon_to_ship(t_ship *ship) 
+int     add_weapon_to_ship(t_ship *ship)
 {
     ship->weapon = malloc(sizeof(t_weapon));
 
@@ -80,7 +80,7 @@ int     add_weapon_to_ship(t_ship *ship)
  *  KO: 0
  *  OK: 1
  */
-int     add_ftl_drive_to_ship(t_ship *ship) 
+int     add_ftl_drive_to_ship(t_ship *ship)
 {
     ship->ftl_drive = malloc(sizeof(t_ftl_drive));
 
@@ -108,7 +108,7 @@ int     add_ftl_drive_to_ship(t_ship *ship)
  *  KO: 0
  *  OK: 1
  */
-int     add_navigation_tools_to_ship(t_ship *ship) 
+int     add_navigation_tools_to_ship(t_ship *ship)
 {
     ship->nav_tools = malloc(sizeof(t_navigation_tools));
 

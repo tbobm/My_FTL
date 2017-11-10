@@ -13,12 +13,12 @@
 /*
  * Creates a game structure
  * Instatiantes ship and first sector
- * 
+ *
  * return:
  *  game
  *  NULL if something goes wrong while malloc'ing
  */
-t_game      *create_game() 
+t_game      *create_game()
 {
     t_game  *game;
 
@@ -48,7 +48,8 @@ t_game      *create_game()
  *  ship
  *  NULL if anything fails
  */
-t_ship      *setup_ship() {
+t_ship      *setup_ship()
+{
     t_ship  *ship;
 
     ship = create_ship();

@@ -14,7 +14,7 @@
  * Attack the enemy if possible,
  * then manage the enemy's attack
  */
-int    attack(t_game *game) 
+int    attack(t_game *game)
 {
     if (game->sector->enemy == NULL) {
         my_putstr("No enemy\n");
@@ -22,7 +22,7 @@ int    attack(t_game *game)
     }
 
     player_attack(game);
-    
+
     if (enemy_is_alive(game)) {
         enemy_attack(game);
     }
@@ -32,7 +32,7 @@ int    attack(t_game *game)
 /*
  * Switch to next sector
  */
-int    jump(t_game *game) 
+int    jump(t_game *game)
 {
     my_putstr("You try to jump...\n");
     if (game->sector->enemy != NULL) {
@@ -53,7 +53,7 @@ int    jump(t_game *game)
 /*
  * Collect freight - detect command
  */
-int     detect(t_game *game) 
+int     detect(t_game *game)
 {
     int i;
 
@@ -63,7 +63,8 @@ int     detect(t_game *game)
         my_putstr("Unable to scan.\n");
         return (0);
     } else if (game->ship->nav_tools->has_scanned == OK) {
-        my_putstr("Already scanned the area. There is nothing to be found...\n");
+        my_putstr("Already scanned the area.");
+        my_putstr("There is nothing to be found...\n");
         return (0);
     } else {
         while (i++ < 10) {
@@ -77,7 +78,7 @@ int     detect(t_game *game)
 /*
  * Collect bonuses
  */
-int     bonus(t_game *game) 
+int     bonus(t_game *game)
 {
     my_putstr("Collecting freights...\n"); /* TODO: REMOVE */
     get_bonus(game->ship);

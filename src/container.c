@@ -10,7 +10,7 @@
 
 #include "ftl.h"
 
-static const t_bonus g_func_ptr[] = 
+static const t_bonus g_func_ptr[] =
 {
     {"attackbonus", fun_attackbonus},
     {"evadebonus", fun_evadebonus},
@@ -31,7 +31,7 @@ static const t_bonus g_func_ptr[] =
  *  KO: 0
  *  OK: 1
  */
-int             add_container_to_ship(t_ship *ship) 
+int             add_container_to_ship(t_ship *ship)
 {
     t_container *container;
 
@@ -52,11 +52,11 @@ int             add_container_to_ship(t_ship *ship)
 /*
  * Adds a container to the linked list
  *
- * if the container is empty, container->first and container->last 
+ * if the container is empty, container->first and container->last
  *    both points to freight
  * otherwise freight will be appended to container->last->next
  */
-void    add_freight_to_container(t_ship *ship, t_freight *freight) 
+void    add_freight_to_container(t_ship *ship, t_freight *freight)
 {
     if (ship->container->first == NULL) {
         ship->container->first = freight;
@@ -73,7 +73,7 @@ void    add_freight_to_container(t_ship *ship, t_freight *freight)
  *
  * Frees the freight, and syncs the linked list
  */
-void    del_freight_from_container(t_ship *ship, t_freight *freight) 
+void    del_freight_from_container(t_ship *ship, t_freight *freight)
 {
     if (freight->prev != NULL) {
         freight->prev->next = freight->next;
@@ -93,7 +93,7 @@ void    del_freight_from_container(t_ship *ship, t_freight *freight)
 /*
  * Allows item manipulation
  */
-void            get_bonus(t_ship *ship) 
+void            get_bonus(t_ship *ship)
 {
     t_freight   *tmp;
     int         idx;

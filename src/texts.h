@@ -59,7 +59,7 @@
 /* System repairs */
 # define REP_FTL_BEG "[INFO] Fixing FTL drive...\n"
 # define REP_FTL_OK "[OK] FTL drive fixed\n"
-# define REP_FTL_ERR "[ERROR] FTL drive fix failed\n" 
+# define REP_FTL_ERR "[ERROR] FTL drive fix failed\n"
 
 # define REP_NAV_BEG "[INFO] Fixing navigation tools...\n"
 # define REP_NAV_OK "[OK] Navigation tools fixed\n"

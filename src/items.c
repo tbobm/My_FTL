@@ -10,7 +10,7 @@
 
 #include "ftl.h"
 
-void            create_freight(t_game *game) 
+void            create_freight(t_game *game)
 {
     t_freight   *freight;
     int         res;
