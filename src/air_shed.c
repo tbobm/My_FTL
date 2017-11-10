@@ -107,3 +107,7 @@ int     add_navigation_tools_to_ship(t_ship *ship) {
     ship->nav_tools->system_state = my_strdup(TXT_SYS_ON);
     return (OK);
 }
+
+void    name_ship(t_ship *ship) {
+    ship->name = my_strdup(SHIP_NAME);
+}

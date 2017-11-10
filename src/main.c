@@ -17,16 +17,6 @@ int main(void) {
     return (0);
 }
 */
-/*
-** main.c for my_ftl in /Users/rhoy/Etna/devc/do_s
-**
-** Made by DO Syou-Rhoy
-** Login   <do_s@etna-alternance.net>
-**
-** Started on  Mon Nov  6 10:20:05 2017 DO Syou-Rhoy
-** Last update Mon Nov  6 10:20:06 2017 DO Syou-Rhoy
-*/
-// #include "ressources.h"
 
 int main() {
 	t_ship* ship = NULL;

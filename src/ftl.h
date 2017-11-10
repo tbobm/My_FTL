@@ -57,6 +57,7 @@ struct          s_container {
 };
 
 struct                  s_ship {
+    char                *name;
     int                 hull;
     t_weapon            *weapon;
     t_ftl_drive         *ftl_drive;
@@ -98,6 +99,9 @@ struct      s_input_commands {
 
 /* Prototypes */
 t_ship  *create_ship();
+t_game  *create_game();
+t_ship  *setup_ship();
+
 int     add_weapon_to_ship(t_ship*);
 int     add_ftl_drive_to_ship(t_ship*);
 int     add_navigation_tools_to_ship(t_ship*);
@@ -121,6 +125,7 @@ void    system_control(t_ship*);
 void    ftl_drive_check(t_ship*);
 void    navigation_tools_system_check(t_ship*);
 void    weapon_system_check(t_ship*);
+void    name_ship(t_ship*);
 
 void    system_repair(t_ship*);
 void    ftl_drive_system_repair(t_ship*);
@@ -141,5 +146,11 @@ int     repair(t_game*);
 int     control(t_game*);
 int     stats(t_game*);
 int     game_exit(t_game*);
+
+int     is_alive(t_game*);
+int     has_energy(t_game*);
+int     is_at_last_sector(t_game*);
+int     has_won(t_game*);
+int     can_continue(t_game*);
 
 #endif /* __FTL_H__ */

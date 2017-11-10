@@ -1,6 +1,8 @@
 #ifndef __TEXTS_H__
 #define __TEXTS_H__
 
+#define SHIP_NAME "Nebuchadnezzar\n"
+
 /* Prompt */
 #define PROMPT "repair_system ~~> "
 
@@ -67,5 +69,8 @@ pose le container\n"
 #define COMMAND_ERR "[SYSTEM FAILURE] : le lecteur de commande est bloque\n"
 #define COMMAND_NOT_FOUND "[SYSTEM FAILURE] : commande inconnue\n"
 #define INPUT_ERR "[INPUT FAILURE] : commande non interpretable\n"
+
+/* Game texts */
+#define WIN_TXT "You managed to survived every sector. You won. :) \n"
 
 #endif /* __TEXTS_H__ */

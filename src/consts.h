@@ -17,4 +17,6 @@
 #define BONUS_EVA 3
 #define BONUS_ENG 1
 
+#define LAST_SECTOR 10
+
 #endif /* __CONSTS_H__ */
