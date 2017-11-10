@@ -9,7 +9,11 @@ int    attack(t_game *game) {
         return (0);
     }
 
+    player_attack(game);
     
+    if (enemy_is_alive(game)) {
+        enemy_attack(game);
+    }
     return (0);
 }
 
@@ -23,7 +27,7 @@ int    jump(t_game *game) {
 }
 
 /*
- * Collect freight
+ * Collect freight - detect command
  */
 int     scan(t_game *game) {
     my_putstr(game->ship->name);

@@ -155,8 +155,9 @@ int     is_at_last_sector(t_game*);
 int     has_won(t_game*);
 int     can_continue(t_game*);
 
-int     player_attack(t_game*);
+void    player_attack(t_game*);
 int     enemy_is_alive(t_game*);
+void    enemy_attack(t_game*);
 
 /* Stats */
 int     generate_nbr(int, int);

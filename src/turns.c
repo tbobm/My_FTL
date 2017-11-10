@@ -11,10 +11,24 @@ void    player_attack(t_game *game) {
     my_putstr(" damage to the enemy\n");
 }
 
-int    enemy_is_alive(t_game *game) {
+int    enemy_is_alive(t_game *game) { /* TODO: Reverse me */
     if (game->sector->enemy->hull <= 0) {
         free(game->sector->enemy);
         game->sector->enemy = NULL;
+        if (get_percent(50) == OK) {
+            game->ship->ftl_drive->energy -= 1;
+        }
+        return (KO);
     }
-    return (game->sector->)
+    return (OK);
+}
+
+void    enemy_attack(t_game *game) {
+    if (get_percent(game->ship->nav_tools->evade)) {
+        my_putstr("Escape!\n");
+        return ;
+    }
+
+    game->ship->hull -= game->sector->enemy->damage;
+    /* TODO: shutdown systems */
 }
