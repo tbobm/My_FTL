@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -W -Wall -Werror -pedantic
 RM = rm -f
-NAME = ftl
+NAME = my_ftl
 SRC	= src/main.c \
 	  src/my_string.c \
 	  src/readline.c \
