@@ -1,0 +1,23 @@
+---
+name: "Try to compile project"
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  base-ci:
+    name: "Build the project"
+    runs-on: "debian-latest"
+    steps:
+      - name: "Checkout Code"
+        uses: "actions/checkout@v2"
+
+      - name: "Install make dependency"
+        run: "apt-get install make"
+      - name: "Build My_FTL"
+        run: "make"
